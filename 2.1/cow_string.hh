@@ -8,6 +8,7 @@
 #include <algorithm>   
 #include <stdexcept>   
 
+
 namespace nerett {
 
 template <typename CharT>

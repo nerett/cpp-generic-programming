@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 
 #include "nth_power.hh"
-#include "src/matrix2x2.hh"
+#include "matrix2x2.hh"
 
 TEST(NthPowerTest, GenericFunctionBehavesCorrectly) {
     EXPECT_EQ(nth_power(2u, 11u), (1u << 11));

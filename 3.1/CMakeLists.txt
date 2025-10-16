@@ -10,7 +10,7 @@ find_package(GTest REQUIRED)
 
 add_executable(
   run_tests
-  tests/run_tests.cpp
+  tests/run_tests.cc
 )
 
 target_include_directories(run_tests PRIVATE src)

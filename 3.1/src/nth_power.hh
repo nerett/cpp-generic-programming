@@ -13,7 +13,7 @@ concept FloatingPoint = std::is_floating_point_v<T>;
 template <typename T>
 concept Matrix = requires(T m) {
     { m * m } -> std::same_as<T>;
-    { T(1) } -> std::same_as<T>;
+    { T::I() } -> std::same_as<T>;
     m.rows;
     m.cols;
 };
@@ -38,9 +38,9 @@ T nth_power(T base, unsigned int exp) {
     if (base.rows != base.cols)
         throw std::invalid_argument("Matrix must be square for exponentiation.");
     if (exp == 0)
-        return T(base.rows);
+        return T::I();
 
-    T res = T(base.rows);
+    T res = T::I();
     while (exp > 0) {
         if (exp % 2 == 1)
             res = res * base;

@@ -29,6 +29,13 @@ struct Matrix2x2 {
         return *this;
     }
 
+    Matrix2x2(int n00, int n01, int n10, int n11) {
+        n[0][0] = n00;
+        n[0][1] = n01;
+        n[1][0] = n10;
+        n[1][1] = n11;
+    }
+
     explicit Matrix2x2(size_t n_size) {
         if (n_size != 2)
             throw std::invalid_argument("Matrix2x2 can only be initialized with size 2.");
